@@ -55933,7 +55933,8 @@ function wrappy (fn, cb) {
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 const core = __nccwpck_require__(2186);
-const { GitHub, context } = __nccwpck_require__(5438);
+const context = __nccwpck_require__(5438);
+const GitHub = __nccwpck_require__(9351);
 
 const { owner, repo } = context.repo;
 const semver = __nccwpck_require__(1383);
