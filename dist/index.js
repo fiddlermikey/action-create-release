@@ -55934,7 +55934,7 @@ function wrappy (fn, cb) {
 
 const core = __nccwpck_require__(2186);
 const { context } = __nccwpck_require__(5438);
-const Octokit = __nccwpck_require__(9351);
+const { Octokit } = __nccwpck_require__(9351)
 const semver = __nccwpck_require__(1383);
 const process = __nccwpck_require__(7282);
 
