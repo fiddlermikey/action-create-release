@@ -2,11 +2,11 @@ const core = require('@actions/core');
 const context = require('@actions/github');
 const GitHub = require("@octokit/rest");
 
-const { owner, repo } = context.repo;
 const semver = require('semver');
 const process = require('process');
 
 const octokit = new GitHub(process.env.GITHUB_TOKEN);
+const { owner, repo } = context.repo;
 const Scheme = {
   Continuous: 'continuous',
   Semantic: 'semantic'
