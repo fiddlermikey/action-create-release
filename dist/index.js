@@ -55934,12 +55934,16 @@ function wrappy (fn, cb) {
 
 const core = __nccwpck_require__(2186);
 const { context } = __nccwpck_require__(5438);
-const { Octokit } = __nccwpck_require__(9351)
+const { Octokit } = __nccwpck_require__(9351);
+const token = core.getInput('repo-token');
 const semver = __nccwpck_require__(1383);
 const process = __nccwpck_require__(7282);
 
-const octokit = new Octokit(process.env.GITHUB_TOKEN);
+const github = new Octokit({ auth: token });
 const { owner, repo } = context.repo;
+console.log(`owner: ${owner}, repo: ${repo}`)
+
+
 const Scheme = {
   Continuous: 'continuous',
   Semantic: 'semantic'

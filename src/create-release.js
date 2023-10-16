@@ -1,11 +1,15 @@
 const core = require('@actions/core');
 const { context } = require('@actions/github');
-const { Octokit } = require("@octokit/rest")
+const { Octokit } = require('@octokit/rest');
+const token = core.getInput('repo-token');
 const semver = require('semver');
 const process = require('process');
 
-const octokit = new Octokit(process.env.GITHUB_TOKEN);
+const github = new Octokit({ auth: token });
 const { owner, repo } = context.repo;
+console.log(`owner: ${owner}, repo: ${repo}`)
+
+
 const Scheme = {
   Continuous: 'continuous',
   Semantic: 'semantic'
