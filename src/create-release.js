@@ -5,7 +5,7 @@ const token = core.getInput('repo-token');
 const semver = require('semver');
 const process = require('process');
 
-const github = new Octokit({ auth: token });
+const octokit = new Octokit({ auth: token });
 const { owner, repo } = context.repo;
 console.log(`owner: ${owner}, repo: ${repo}`)
 

@@ -55939,7 +55939,7 @@ const token = core.getInput('repo-token');
 const semver = __nccwpck_require__(1383);
 const process = __nccwpck_require__(7282);
 
-const github = new Octokit({ auth: token });
+const octokit = new Octokit({ auth: token });
 const { owner, repo } = context.repo;
 console.log(`owner: ${owner}, repo: ${repo}`)
 
