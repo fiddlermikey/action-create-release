@@ -55936,11 +55936,11 @@ const core = __nccwpck_require__(2186);
 const context = __nccwpck_require__(5438);
 const GitHub = __nccwpck_require__(9351);
 
-const { owner, repo } = context.repo;
 const semver = __nccwpck_require__(1383);
 const process = __nccwpck_require__(7282);
 
 const octokit = new GitHub(process.env.GITHUB_TOKEN);
+const { owner, repo } = context.repo;
 const Scheme = {
   Continuous: 'continuous',
   Semantic: 'semantic'
