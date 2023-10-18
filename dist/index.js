@@ -56098,6 +56098,7 @@ async function run() {
 
     const body = core.getInput('body', { required: false });
     const draft = core.getInput('draft', { required: false }) === 'true';
+    core.info('\u001b[48;5;6mAll variables set. Attempting to create the release')
 
     // Create a release
     // API Documentation: https://developer.github.com/v3/repos/releases/#create-a-release
