@@ -1,7 +1,7 @@
 const core = require('@actions/core');
 const { context } = require('@actions/github');
 const { Octokit } = require('@octokit/rest');
-const token = core.getInput('repo-token');
+const token = process.env.GITHUB_TOKEN;
 const semver = require('semver');
 const process = require('process');
 
