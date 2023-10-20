@@ -56098,7 +56098,6 @@ async function run() {
 
     const body = core.getInput('body', { required: false });
     const draft = core.getInput('draft', { required: false }) === 'true';
-    core.info('\u001b[35mAll variables set. Attempting to create the release')
 
     // Create a release
     // API Documentation: https://developer.github.com/v3/repos/releases/#create-a-release
@@ -56112,7 +56111,6 @@ async function run() {
       draft,
       prerelease
     });
-    core.info('\u001b[35mRelease created. Set Response packet')
 
     // Get the ID, html_url, and upload URL for the created Release from the response
     const {
